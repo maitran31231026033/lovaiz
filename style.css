@@ -1,124 +1,106 @@
-:root {
-    --do-nhang: #C44536;
-    --vang-mai: #F4C542;
-    --xanh-la: #4CAF50;
-    --xanh-nuoc: #2E8B57;
-    --dark: #333;
-    --light: #f9f9f9;
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --do-nhang:#C44536;
+  --vang-mai:#F4C542;
+  --xanh-la:#4CAF50;
+  --xanh-nuoc:#2E8B57;
+  --kem:#FFF8F0;
+  --toi:#1A0A00;
+  --font-display:'Playfair Display',serif;
+  --font-body:'Nunito',sans-serif;
+}
+body{font-family:var(--font-body);background:var(--kem);color:var(--toi);min-height:100vh;overflow-x:hidden}
+
+/* ── HERO ── */
+.hero{
+  position:relative;background:var(--do-nhang);
+  overflow:hidden;min-height:320px;
+  display:flex;align-items:flex-end;
+}
+.hero-bg{
+  position:absolute;inset:0;
+  background:
+    radial-gradient(ellipse 60% 80% at 80% 20%,rgba(244,197,66,.25) 0%,transparent 60%),
+    radial-gradient(ellipse 40% 60% at 10% 90%,rgba(44,139,87,.2)  0%,transparent 50%),
+    var(--do-nhang);
+}
+.hero-pattern{
+  position:absolute;inset:0;opacity:.07;
+  background-image:repeating-linear-gradient(45deg,#fff 0,#fff 1px,transparent 0,transparent 50%);
+  background-size:20px 20px;
+}
+.hero-content{position:relative;z-index:2;padding:2rem 1.5rem 1.5rem;width:100%}
+.hero-tag{
+  display:inline-block;background:var(--vang-mai);color:#5a3a00;
+  font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;
+  padding:4px 14px;border-radius:20px;margin-bottom:12px;
+}
+.hero-title{font-family:var(--font-display);font-size:2.6rem;color:#fff;line-height:1.1;margin-bottom:6px}
+.hero-title span{color:var(--vang-mai);font-style:italic}
+.hero-sub{font-size:13px;color:rgba(255,255,255,.8);letter-spacing:.5px}
+.hero-badge-strip{position:absolute;right:1.2rem;top:1.2rem;display:flex;gap:6px;flex-direction:column;align-items:flex-end}
+.mini-badge{
+  background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.3);
+  border-radius:12px;padding:4px 10px;font-size:11px;color:#fff;backdrop-filter:blur(4px);
 }
 
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 0;
-    background-color: var(--light);
-    color: var(--dark);
+/* ── NAV TABS ── */
+.nav-tabs{display:flex;background:#fff;border-bottom:2px solid var(--do-nhang);position:sticky;top:0;z-index:100}
+.nav-tab{
+  flex:1;padding:12px 4px;font-size:12px;font-weight:700;text-align:center;
+  cursor:pointer;color:#888;border:none;background:none;transition:all .2s;
+  letter-spacing:.3px;border-bottom:3px solid transparent;margin-bottom:-2px;
 }
+.nav-tab.active{color:var(--do-nhang);border-bottom-color:var(--do-nhang)}
 
-header {
-    background-color: var(--do-nhang);
-    color: white;
-    padding: 1rem 5%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 4px solid var(--vang-mai);
+/* ── SECTIONS ── */
+.section{display:none;padding:1.2rem 1rem;animation:fadeIn .3s ease}
+.section.active{display:block}
+@keyframes fadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+
+/* ── LỘ TRÌNH ── */
+.route-header h2{font-family:var(--font-display);font-size:1.3rem;color:var(--do-nhang);margin-bottom:1rem}
+.route-desc{font-size:12.5px;color:#666;margin-bottom:1.2rem;line-height:1.6}
+.route-stop{display:flex;gap:12px;position:relative}
+.route-stop:not(:last-child)::after{
+  content:'';position:absolute;left:19px;top:44px;
+  width:2px;height:calc(100% - 10px);background:var(--vang-mai);
 }
-
-.logo span {
-    font-weight: 300;
-    font-style: italic;
-    color: var(--vang-mai);
+.stop-num{
+  width:38px;height:38px;border-radius:50%;display:flex;align-items:center;justify-content:center;
+  font-weight:700;color:#fff;flex-shrink:0;position:relative;z-index:1;
 }
+.stop-card{flex:1;background:#fff;border-radius:12px;padding:10px 12px;margin-bottom:12px;border-left:3px solid var(--vang-mai)}
+.stop-name{font-weight:700;font-size:13px;color:var(--toi)}
+.stop-time{font-size:11px;color:var(--xanh-nuoc);font-weight:600}
+.stop-desc{font-size:12px;color:#666;margin:4px 0}
+.tag{font-size:10px;padding:2px 8px;border-radius:10px;font-weight:600;margin-right:4px}
+.tag-do{background:#fde8e6;color:var(--do-nhang)}
+.tag-vang{background:#fef9e7;color:#a07000}
+.tag-xanh{background:#e8f5e9;color:var(--xanh-nuoc)}
 
-nav ul { display: flex; list-style: none; }
-nav ul li { margin-left: 20px; }
-nav ul li a { color: white; text-decoration: none; font-weight: bold; }
-
-.hero {
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://via.placeholder.com/1200x400');
-    background-size: cover;
-    color: white;
-    text-align: center;
-    padding: 80px 20px;
+/* ── NHIỆM VỤ ── */
+.mission-header{display:flex;align-items:center;margin-bottom:1rem}
+.progress-bar-wrap{background:#f0e8d8;border-radius:8px;height:8px;flex:1;margin:0 10px}
+.progress-bar{height:8px;border-radius:8px;background:linear-gradient(90deg,var(--do-nhang),var(--vang-mai));transition:width .4s}
+.mission-card{
+  background:#fff;border-radius:12px;padding:12px;border:1px solid #e8e0d0;
+  display:flex;gap:12px;margin-bottom:10px;cursor:pointer;
 }
+.mission-card.done{background:#f0faf0;border-color:var(--xanh-la)}
+.mission-status{width:28px;height:28px;border-radius:50%;background:#ddd;display:flex;align-items:center;justify-content:center;color:#fff;flex-shrink:0}
 
-.btn-start {
-    background-color: var(--vang-mai);
-    border: none;
-    padding: 15px 30px;
-    font-size: 1.1rem;
-    cursor: pointer;
-    border-radius: 5px;
-    font-weight: bold;
-    color: var(--do-nhang);
+/* ── HUY HIỆU ── */
+.badge-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.badge-item{background:#fff;border-radius:12px;padding:10px 8px;text-align:center;position:relative;transition: .2s}
+.badge-item.unlocked{border:2px solid var(--vang-mai)}
+.badge-item.locked{opacity:.5;filter:grayscale(.7)}
+.badge-new{position:absolute;top:-4px;right:-4px;background:var(--do-nhang);color:#fff;font-size:8px;padding:2px 5px;border-radius:8px}
+
+/* ── TOAST ── */
+.toast{
+  position:fixed;bottom:20px;left:50%;transform:translateX(-50%) translateY(60px);
+  background:var(--xanh-nuoc);color:#fff;padding:10px 20px;border-radius:20px;
+  z-index:999;opacity:0;transition:all .3s;pointer-events:none;
 }
-
-.itinerary { padding: 50px 5%; background: white; }
-
-.timeline {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
-    margin-top: 30px;
-}
-
-.checkpoint {
-    border: 2px solid #ddd;
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-    transition: 0.3s;
-}
-
-.checkpoint.active {
-    border-color: var(--xanh-la);
-    box-shadow: 0 5px 15px rgba(76, 175, 80, 0.2);
-}
-
-.task-btn {
-    background-color: var(--xanh-nuoc);
-    color: white;
-    border: none;
-    padding: 8px 15px;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-.task-btn:disabled { background-color: #ccc; cursor: not-allowed; }
-
-.badge-section {
-    background-color: #eee;
-    padding: 50px 5%;
-    text-align: center;
-}
-
-.badge-container {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-}
-
-.badge {
-    width: 100px;
-    height: 100px;
-    background: white;
-    border-radius: 50%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    border: 3px solid var(--vang-mai);
-    transition: 0.5s;
-}
-
-.badge.locked {
-    filter: grayscale(1);
-    opacity: 0.5;
-}
-
-.badge.unlocked {
-    filter: grayscale(0);
-    opacity: 1;
-    transform: scale(1.1);
-    box-shadow: 0 0 20px var(--vang-mai);
-}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
