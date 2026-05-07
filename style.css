@@ -6,7 +6,7 @@
   --xanh-nuoc:#2E8B57;
   --kem:#FFF8F0;
   --toi:#1A0A00;
-  --font-display:'Playfair Display',serif;
+  --font-display:'Montserrat',serif;
   --font-body:'Nunito',sans-serif;
 }
 body{font-family:var(--font-body);background:var(--kem);color:var(--toi);min-height:100vh;overflow-x:hidden}
@@ -32,10 +32,10 @@ body{font-family:var(--font-body);background:var(--kem);color:var(--toi);min-hei
 .hero-content{position:relative;z-index:2;padding:2rem 1.5rem 1.5rem;width:100%}
 .hero-tag{
   display:inline-block;background:var(--vang-mai);color:#5a3a00;
-  font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;
+  font-size:16px;font-weight:700;letter-spacing:2px;text-transform:uppercase;
   padding:4px 14px;border-radius:20px;margin-bottom:12px;
 }
-.hero-title{font-family:var(--font-display);font-size:2.6rem;color:#fff;line-height:1.1;margin-bottom:6px}
+.hero-title{font-family:var(--font-display);font-size:3.5rem;color:#fff;line-height:1.1;margin-bottom:6px}
 .hero-title span{color:var(--vang-mai);font-style:italic}
 .hero-sub{font-size:13px;color:rgba(255,255,255,.8);letter-spacing:.5px}
 .hero-badge-strip{position:absolute;right:1.2rem;top:1.2rem;display:flex;gap:6px;flex-direction:column;align-items:flex-end}
@@ -59,7 +59,7 @@ body{font-family:var(--font-body);background:var(--kem);color:var(--toi);min-hei
 @keyframes fadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
 
 /* ── LỘ TRÌNH ── */
-.route-header h2{font-family:var(--font-display);font-size:1.3rem;color:var(--do-nhang);margin-bottom:1rem}
+.route-header h2{font-family:var(--font-display);font-size:2.5rem;color:var(--do-nhang);margin-bottom:1rem}
 .route-desc{font-size:12.5px;color:#666;margin-bottom:1.2rem;line-height:1.6}
 .route-stop{display:flex;gap:12px;position:relative}
 .route-stop:not(:last-child)::after{
