@@ -16,11 +16,11 @@
     <div class="hero-bg"></div>
     <div class="hero-pattern"></div>
     <div class="hero-badge-strip">
-        <div class="mini-badge">🗺 4 điểm đến</div>
-        <div class="mini-badge">🏅 8 huy hiệu</div>
+        <div class="mini-badge"> 6 điểm đến</div>
+        <div class="mini-badge"> 6 huy hiệu</div>
     </div>
     <div class="hero-content">
-        <div class="hero-tag">✦ Khám phá Sài Gòn</div>
+        <div class="hero-tag"> Khám phá Bình Lợi</div>
         <h1 class="hero-title">Bình Lợi<br><span>B-side of Saigon</span></h1>
         <p class="hero-sub">Hành trình cá nhân hóa · Check-in · Sưu tập huy hiệu</p>
     </div>
@@ -28,43 +28,44 @@
 
 <!-- ═══════════════ NAV ═══════════════ -->
 <nav class="nav-tabs">
-    <button class="nav-tab active" onclick="switchTab('loTrinh',this)">🗺 Lộ trình</button>
-    <button class="nav-tab" onclick="switchTab('nhiemVu',this)">⚔️ Nhiệm vụ</button>
-    <button class="nav-tab" onclick="switchTab('huyHieu',this)">🏅 Huy hiệu</button>
-    <button class="nav-tab" onclick="switchTab('uuDai',this)">🎁 Ưu đãi</button>
+    <button class="nav-tab active" onclick="switchTab('loTrinh',this)"> Lộ trình</button>
+    <button class="nav-tab" onclick="switchTab('NhiemVu',this)"> Nhiệm vụ</button>
+    <button class="nav-tab" onclick="switchTab('HuyHieu',this)"> Huy hiệu</button>
+    <button class="nav-tab" onclick="switchTab('UuDai',this)"> Ưu đãi</button>
 </nav>
 
 <!-- ═══════════════ LỘ TRÌNH ═══════════════ -->
-<div id="loTrinh" class="section active">
+<div id="LoTrinh" class="section active">
     <div class="route-header">
         <h2>Lộ trình tối ưu</h2>
     </div>
-    <p class="route-desc">Kết nối 4 điểm đến trọng điểm theo thứ tự tối ưu nhất — tiết kiệm thời gian di chuyển, tối đa trải nghiệm.</p>
+    <p class="route-desc">Kết nối 6 điểm đến trọng điểm theo thứ tự tối ưu nhất — tiết kiệm thời gian di chuyển, tối đa trải nghiệm.</p>
 
     <div class="route-list">
         <!-- Điểm 1 -->
         <div class="route-stop">
-            <div class="stop-num" style="background:var(--do-nhang)">1</div>
+            <div class="stop-num" style="background:var(--xanh-nuoc)">1</div>
             <div class="stop-card">
-                <div class="stop-name">🛕 Chùa Bình Lợi Cổ Tự</div>
-                <div class="stop-time">⏰ 7:00 – 8:30 · ~90 phút</div>
-                <div class="stop-desc">Ngôi chùa cổ ven sông, không gian tĩnh lặng, đặc biệt đẹp vào buổi sáng sớm.</div>
+                <img src="công viên văn hóa Láng Le.webp" alt="Công viên văn hóa Láng Le" class="stop-img">
+                <div class="stop-name"> Công viên văn hóa Láng Le</div>
+                <div class="stop-desc">Công viên Văn hóa Láng Le với diện tích gần 22 ha, nép mình giữa rừng tràm bạt ngàn, từ lâu đã là một điểm đến tiềm năng nhờ không gian thoáng đãng và không khí trong lành. Vị trí cách xa trung tâm thành phố, cùng với sự hiện diện của Học viện Phật giáo Việt Nam (cơ sở 2) và Chùa Thanh Tâm (trước đây là chùa Phật Cô Đơn) liền kề, càng tạo thêm nét đặc sắc cho khu vực.</div>
                 <div class="stop-tags">
-                    <span class="tag tag-do">Tâm linh</span>
-                    <span class="tag tag-vang">Check-in sáng</span>
+                    <span class="tag tag-xanh-la">Trong lành</span>
+                    <span class="tag tag-vang">Năng động</span>
                 </div>
             </div>
         </div>
         <!-- Điểm 2 -->
         <div class="route-stop">
-            <div class="stop-num" style="background:var(--vang-mai);color:#5a3a00">2</div>
+            <div class="stop-num" style="background:var(--do-mai-chua);color:#A62F20">2</div>
             <div class="stop-card">
-                <div class="stop-name">🌉 Cầu Bình Lợi Cũ</div>
-                <div class="stop-time">⏰ 8:45 – 10:00 · ~75 phút</div>
-                <div class="stop-desc">Cây cầu sắt 100+ năm tuổi — di sản công nghiệp độc đáo nhất Sài Gòn.</div>
+                <img src="chùa thanh tâm.jpg" alt="Chùa Thanh Tâm" class="stop-img">
+                <div class="stop-name"> Chùa Thanh Tâm</div>
+                <div class="stop-time"> Thời gian dự kiến: 8:45 – 10:00 · ~ 75 phút</div>
+                <div class="stop-desc">Thanh Tâm tự là cái tên khá xa lạ với số đông, hầu hết người ta nhớ đến nơi này dưới tên gọi Bát Bửu Phật Đài, hay dân dã hơn: chùa Phật Cô Đơn.</div>
                 <div class="stop-tags">
-                    <span class="tag tag-vang">Di sản</span>
-                    <span class="tag tag-xanh">Nhiếp ảnh</span>
+                    <span class="tag tag-vang">Tâm linh</span>
+                    <span class="tag tag-xanh">Check-in</span>
                 </div>
             </div>
         </div>
@@ -72,24 +73,27 @@
         <div class="route-stop">
             <div class="stop-num" style="background:var(--xanh-la)">3</div>
             <div class="stop-card">
-                <div class="stop-name">🍃 Bờ Sông Bình Lợi</div>
-                <div class="stop-time">⏰ 10:15 – 11:45 · ~90 phút</div>
-                <div class="stop-desc">Đoạn bờ sông xanh mát, lý tưởng để tản bộ và trải nghiệm nhịp sống bình dị.</div>
+                <img src="đình bình lợi.jpg" alt="Đình Bình Lợi" class="stop-img">
+                <div class="stop-name">Đình Bình Lợi</div>
+                <div class="stop-time">Thời gian dự kiến: 10:15 – 11:45 · ~ 90 phút</div>
+                <div class="stop-desc">Nép mình cuối đường Đặng Thùy Trâm, khu phố 48, Đình Thần Bình Lợi Trung từ lâu đã trở thành một phần không thể thiếu trong đời sống tinh thần và lịch sử của người dân địa phương.
+Được hình thành vào cuối thế kỷ XIX, đình là nơi thờ tự linh thiêng, gắn liền với tín ngưỡng dân gian truyền thống. Đặc biệt, nơi đây từng là cơ sở cách mạng quan trọng, góp phần nuôi giấu cán bộ, tổ chức các cuộc họp bí mật trong thời kỳ kháng chiến chống thực dân, đế quốc.</div>
                 <div class="stop-tags">
-                    <span class="tag tag-xanh">Thiên nhiên</span>
-                    <span class="tag tag-xanh">Đi bộ</span>
+                    <span class="tag tag-xanh">Di tích lịch sử</span>
+                    <span class="tag tag-xanh">Cổ kính</span>
                 </div>
             </div>
         </div>
         <!-- Điểm 4 -->
         <div class="route-stop">
-            <div class="stop-num" style="background:var(--xanh-nuoc)">4</div>
+            <div class="stop-num" style="background:var(--do-nhang)">4</div>
             <div class="stop-card">
-                <div class="stop-name">🏘 Xóm Chài Bình Lợi</div>
-                <div class="stop-time">⏰ 12:00 – 13:30 · ~90 phút</div>
-                <div class="stop-desc">Làng chài truyền thống — thưởng thức hải sản tươi ngon.</div>
+                <img src="làng nghề nhang.webp" alt="Làng nghề nhang" class="stop-img"> 
+                <div class="stop-name">Lang nghe nhang</div>
+                <div class="stop-time">Thời gian dự kiến: 12:00 – 13:30 · ~ 90 phút</div>
+                <div class="stop-desc">Làng nghề truyền thống - trên bàn thờ gia tiên của người Việt, nhang (hương) là thứ không thể thiếu trong những dịp lễ, tết, hiếu, hỉ.... Nhang được xem như chiếc cầu nối giữa thế giới thực tại và tâm linh, là “chiếc xe” chuyên chở những lời thỉnh cầu hay ước mong của con người đến với tổ tiên, trời, Phật.</div>
                 <div class="stop-tags">
-                    <span class="tag tag-do">Ẩm thực</span>
+                    <span class="tag tag-do">Làng nghề truyền thống</span>
                     <span class="tag tag-vang">Văn hóa</span>
                 </div>
             </div>
