@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bình Lợi - The B-side of Saigon</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/your-code.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">Bình Lợi <span>The B-side</span></div>
+        <nav>
+            <ul>
+                <li><a href="#">Hành trình</a></li>
+                <li><a href="#">Bản đồ</a></li>
+                <li><a href="#">Túi đồ của tôi</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Khám Phá Mặt Khác Của Sài Gòn</h1>
+        <p>Hành trình cá nhân hóa qua 4 điểm đến trọng điểm tại Bình Lợi.</p>
+        <button class="btn-start">Bắt đầu lộ trình tối ưu</button>
+    </section>
+
+    <!-- Personalized Path Section -->
+    <section class="itinerary">
+        <h2>Lộ Trình Tối Ưu Của Bạn</h2>
+        <div class="timeline">
+            <div class="checkpoint active" data-point="1">
+                <div class="icon">🏮</div>
+                <h3>Vườn Mai Bình Lợi</h3>
+                <p>Check-in cùng sắc vàng rực rỡ.</p>
+                <button class="task-btn" onclick="completeTask(1)">Làm nhiệm vụ</button>
+            </div>
+            <div class="checkpoint" data-point="2">
+                <div class="icon">🛶</div>
+                <h3>Bến Đò Xưa</h3>
+                <p>Ngắm hoàng hôn bên dòng sông.</p>
+                <button class="task-btn" disabled>Đang khóa</button>
+            </div>
+            <div class="checkpoint" data-point="3">
+                <div class="icon">🌿</div>
+                <h3>Nông Trại Xanh</h3>
+                <p>Trải nghiệm làm nông dân thực thụ.</p>
+                <button class="task-btn" disabled>Đang khóa</button>
+            </div>
+            <div class="checkpoint" data-point="4">
+                <div class="icon">🍜</div>
+                <h3>Ẩm Thực Ven Sông</h3>
+                <p>Thưởng thức đặc sản Bình Lợi.</p>
+                <button class="task-btn" disabled>Đang khóa</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Badge Collection -->
+    <section class="badge-section">
+        <h2>Bộ Sưu Tập Huy Hiệu</h2>
+        <div class="badge-container" id="badgeContainer">
+            <div class="badge locked" id="badge-1">🏅 <br> <span>Mai Vàng</span></div>
+            <div class="badge locked" id="badge-2">🏅 <br> <span>Sóng Nước</span></div>
+            <div class="badge locked" id="badge-3">🏅 <br> <span>Lá Xanh</span></div>
+            <div class="badge locked" id="badge-4">🏅 <br> <span>Ẩm Thực</span></div>
+        </div>
+        <div id="reward-msg" style="display:none; color: #C44536; font-weight: bold; margin-top: 20px;">
+            🎉 Chúc mừng! Bạn đã nhận được mã ưu đãi 20% tại các cửa hàng liên kết!
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
