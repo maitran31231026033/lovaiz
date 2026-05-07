@@ -71,7 +71,8 @@ body{font-family:var(--font-body);background:var(--kem);color:var(--toi);min-hei
   width:38px;height:38px;border-radius:50%;display:flex;align-items:center;justify-content:center;
   font-weight:700;color:#fff;flex-shrink:0;position:relative;z-index:1;
 }
-.stop-card{flex:1;background:#fff;border-radius:12px;padding:10px 12px;margin-bottom:12px;border-left:3px solid var(--vang-mai)}
+.stop-card{background: linear-gradient(rgba(255,255,255,0.7), rgba(255,255,255,0.7)), 
+                url('link-anh-cua-ban.jpg') center/cover no-repeat !important;}
 .stop-name{font-weight:700;font-size:13px;color:var(--toi)}
 .stop-time{font-size:11px;color:var(--xanh-nuoc);font-weight:600}
 .stop-desc{font-size:12px;color:#666;margin:4px 0}
