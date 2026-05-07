@@ -3,76 +3,198 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bình Lợi - The B-side of Saigon</title>
+    <title>Bình Lợi – The B-side of Saigon</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- CSS File -->
     <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/your-code.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
-    <!-- Header -->
-    <header>
-        <div class="logo">Bình Lợi <span>The B-side</span></div>
-        <nav>
-            <ul>
-                <li><a href="#">Hành trình</a></li>
-                <li><a href="#">Bản đồ</a></li>
-                <li><a href="#">Túi đồ của tôi</a></li>
-            </ul>
-        </nav>
-    </header>
+<!-- ═══════════════ HERO ═══════════════ -->
+<div class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-pattern"></div>
+    <div class="hero-badge-strip">
+        <div class="mini-badge">🗺 4 điểm đến</div>
+        <div class="mini-badge">🏅 8 huy hiệu</div>
+    </div>
+    <div class="hero-content">
+        <div class="hero-tag">✦ Khám phá Sài Gòn</div>
+        <h1 class="hero-title">Bình Lợi<br><span>B-side of Saigon</span></h1>
+        <p class="hero-sub">Hành trình cá nhân hóa · Check-in · Sưu tập huy hiệu</p>
+    </div>
+</div>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <h1>Khám Phá Mặt Khác Của Sài Gòn</h1>
-        <p>Hành trình cá nhân hóa qua 4 điểm đến trọng điểm tại Bình Lợi.</p>
-        <button class="btn-start">Bắt đầu lộ trình tối ưu</button>
-    </section>
+<!-- ═══════════════ NAV ═══════════════ -->
+<nav class="nav-tabs">
+    <button class="nav-tab active" onclick="switchTab('loTrinh',this)">🗺 Lộ trình</button>
+    <button class="nav-tab" onclick="switchTab('nhiemVu',this)">⚔️ Nhiệm vụ</button>
+    <button class="nav-tab" onclick="switchTab('huyHieu',this)">🏅 Huy hiệu</button>
+    <button class="nav-tab" onclick="switchTab('uuDai',this)">🎁 Ưu đãi</button>
+</nav>
 
-    <!-- Personalized Path Section -->
-    <section class="itinerary">
-        <h2>Lộ Trình Tối Ưu Của Bạn</h2>
-        <div class="timeline">
-            <div class="checkpoint active" data-point="1">
-                <div class="icon">🏮</div>
-                <h3>Vườn Mai Bình Lợi</h3>
-                <p>Check-in cùng sắc vàng rực rỡ.</p>
-                <button class="task-btn" onclick="completeTask(1)">Làm nhiệm vụ</button>
-            </div>
-            <div class="checkpoint" data-point="2">
-                <div class="icon">🛶</div>
-                <h3>Bến Đò Xưa</h3>
-                <p>Ngắm hoàng hôn bên dòng sông.</p>
-                <button class="task-btn" disabled>Đang khóa</button>
-            </div>
-            <div class="checkpoint" data-point="3">
-                <div class="icon">🌿</div>
-                <h3>Nông Trại Xanh</h3>
-                <p>Trải nghiệm làm nông dân thực thụ.</p>
-                <button class="task-btn" disabled>Đang khóa</button>
-            </div>
-            <div class="checkpoint" data-point="4">
-                <div class="icon">🍜</div>
-                <h3>Ẩm Thực Ven Sông</h3>
-                <p>Thưởng thức đặc sản Bình Lợi.</p>
-                <button class="task-btn" disabled>Đang khóa</button>
+<!-- ═══════════════ LỘ TRÌNH ═══════════════ -->
+<div id="loTrinh" class="section active">
+    <div class="route-header">
+        <h2>Lộ trình tối ưu</h2>
+    </div>
+    <p class="route-desc">Kết nối 4 điểm đến trọng điểm theo thứ tự tối ưu nhất — tiết kiệm thời gian di chuyển, tối đa trải nghiệm.</p>
+
+    <div class="route-list">
+        <!-- Điểm 1 -->
+        <div class="route-stop">
+            <div class="stop-num" style="background:var(--do-nhang)">1</div>
+            <div class="stop-card">
+                <div class="stop-name">🛕 Chùa Bình Lợi Cổ Tự</div>
+                <div class="stop-time">⏰ 7:00 – 8:30 · ~90 phút</div>
+                <div class="stop-desc">Ngôi chùa cổ ven sông, không gian tĩnh lặng, đặc biệt đẹp vào buổi sáng sớm.</div>
+                <div class="stop-tags">
+                    <span class="tag tag-do">Tâm linh</span>
+                    <span class="tag tag-vang">Check-in sáng</span>
+                </div>
             </div>
         </div>
-    </section>
-
-    <!-- Badge Collection -->
-    <section class="badge-section">
-        <h2>Bộ Sưu Tập Huy Hiệu</h2>
-        <div class="badge-container" id="badgeContainer">
-            <div class="badge locked" id="badge-1">🏅 <br> <span>Mai Vàng</span></div>
-            <div class="badge locked" id="badge-2">🏅 <br> <span>Sóng Nước</span></div>
-            <div class="badge locked" id="badge-3">🏅 <br> <span>Lá Xanh</span></div>
-            <div class="badge locked" id="badge-4">🏅 <br> <span>Ẩm Thực</span></div>
+        <!-- Điểm 2 -->
+        <div class="route-stop">
+            <div class="stop-num" style="background:var(--vang-mai);color:#5a3a00">2</div>
+            <div class="stop-card">
+                <div class="stop-name">🌉 Cầu Bình Lợi Cũ</div>
+                <div class="stop-time">⏰ 8:45 – 10:00 · ~75 phút</div>
+                <div class="stop-desc">Cây cầu sắt 100+ năm tuổi — di sản công nghiệp độc đáo nhất Sài Gòn.</div>
+                <div class="stop-tags">
+                    <span class="tag tag-vang">Di sản</span>
+                    <span class="tag tag-xanh">Nhiếp ảnh</span>
+                </div>
+            </div>
         </div>
-        <div id="reward-msg" style="display:none; color: #C44536; font-weight: bold; margin-top: 20px;">
-            🎉 Chúc mừng! Bạn đã nhận được mã ưu đãi 20% tại các cửa hàng liên kết!
+        <!-- Điểm 3 -->
+        <div class="route-stop">
+            <div class="stop-num" style="background:var(--xanh-la)">3</div>
+            <div class="stop-card">
+                <div class="stop-name">🍃 Bờ Sông Bình Lợi</div>
+                <div class="stop-time">⏰ 10:15 – 11:45 · ~90 phút</div>
+                <div class="stop-desc">Đoạn bờ sông xanh mát, lý tưởng để tản bộ và trải nghiệm nhịp sống bình dị.</div>
+                <div class="stop-tags">
+                    <span class="tag tag-xanh">Thiên nhiên</span>
+                    <span class="tag tag-xanh">Đi bộ</span>
+                </div>
+            </div>
         </div>
-    </section>
+        <!-- Điểm 4 -->
+        <div class="route-stop">
+            <div class="stop-num" style="background:var(--xanh-nuoc)">4</div>
+            <div class="stop-card">
+                <div class="stop-name">🏘 Xóm Chài Bình Lợi</div>
+                <div class="stop-time">⏰ 12:00 – 13:30 · ~90 phút</div>
+                <div class="stop-desc">Làng chài truyền thống — thưởng thức hải sản tươi ngon.</div>
+                <div class="stop-tags">
+                    <span class="tag tag-do">Ẩm thực</span>
+                    <span class="tag tag-vang">Văn hóa</span>
+                </div>
+            </div>
+        </div>
+    </div>
 
-    <script src="script.js"></script>
+    <div class="checkin-section">
+        <h3 class="checkin-title">📍 Tọa độ Check-in nổi bật</h3>
+        <div class="checkin-grid">
+            <div class="checkin-card">
+                <div class="checkin-icon">🛕</div>
+                <div class="checkin-name">Chùa Cổ Tự</div>
+                <div class="checkin-coord">10.8421°N 106.7253°E</div>
+                <div class="checkin-tip">Chụp góc cổng tam quan lúc 7h sáng</div>
+            </div>
+            <div class="checkin-card">
+                <div class="checkin-icon">🌉</div>
+                <div class="checkin-name">Cầu Sắt Cũ</div>
+                <div class="checkin-coord">10.8388°N 106.7201°E</div>
+                <div class="checkin-tip">Đứng giữa cầu ngắm mặt trời mọc</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ═══════════════ NHIỆM VỤ ═══════════════ -->
+<div id="nhiemVu" class="section">
+    <div class="mission-header">
+        <h2>Nhiệm vụ</h2>
+        <div class="progress-bar-wrap">
+            <div class="progress-bar" id="missionBar" style="width:25%"></div>
+        </div>
+        <span class="progress-label" id="missionLabel">1/4</span>
+    </div>
+
+    <div class="mission-list" id="missionList">
+        <div class="mission-card done" data-id="0">
+            <div class="mission-status">✓</div>
+            <div class="mission-info">
+                <div class="mission-title">Thắp nén nhang đầu tiên</div>
+                <div class="mission-place">🛕 Chùa Bình Lợi Cổ Tự</div>
+                <div class="mission-desc">Thắp nhang và chụp ảnh bàn thờ Phật trong ánh sáng ban mai.</div>
+                <div class="mission-reward"><span>🏅</span> Huy hiệu "Người Thành Tâm" · Giảm 10% đồ ăn</div>
+            </div>
+        </div>
+
+        <div class="mission-card" data-id="1" onclick="completeMission(this)">
+            <div class="mission-status">!</div>
+            <div class="mission-info">
+                <div class="mission-title">Đặt chân lên cầu sắt 100 năm</div>
+                <div class="mission-place">🌉 Cầu Bình Lợi Cũ</div>
+                <div class="mission-desc">Tìm biển số sản xuất năm 1902 trên cầu.</div>
+                <div class="mission-reward"><span>🏅</span> Huy hiệu "Thám Tử Di Sản" · Miễn phí guide tour</div>
+            </div>
+        </div>
+        <!-- Thêm các mission khác tương tự ở đây... -->
+    </div>
+</div>
+
+<!-- ═══════════════ HUY HIỆU ═══════════════ -->
+<div id="huyHieu" class="section">
+    <p class="badge-intro">Sưu tập huy hiệu để mở khóa ưu đãi độc quyền!</p>
+    <div class="badge-progress-wrap">
+        <div class="bp-label">Tiến độ sưu tập</div>
+        <div class="bp-bar-bg"><div class="bp-bar" id="badgeBar" style="width:12.5%"></div></div>
+        <div class="bp-stats"><span id="badgeCount">1/8 huy hiệu</span><span>Còn 7 cái nữa</span></div>
+    </div>
+
+    <div class="badge-grid">
+        <div class="badge-item unlocked">
+            <div class="badge-new">MỚI</div>
+            <div class="badge-emoji">🙏</div>
+            <div class="badge-name">Người Thành Tâm</div>
+            <div class="badge-cond">Thắp nhang Chùa</div>
+            <div class="badge-perk">-10% đồ ăn</div>
+        </div>
+        <div class="badge-item locked">
+            <div class="badge-emoji">🔍</div>
+            <div class="badge-name">Thám Tử Di Sản</div>
+            <div class="badge-cond">Khám phá cầu cũ</div>
+            <div class="badge-perk">Tour miễn phí</div>
+        </div>
+        <!-- Thêm các huy hiệu khác... -->
+    </div>
+</div>
+
+<!-- ═══════════════ ƯU ĐÃI ═══════════════ -->
+<div id="uuDai" class="section">
+    <div class="uu-dai-list">
+        <div class="uu-dai-card">
+            <div class="uu-icon do">🙏</div>
+            <div class="uu-info">
+                <div class="uu-name">Giảm 10% đồ ăn vặt</div>
+                <div class="uu-detail">Áp dụng quanh Chùa Bình Lợi</div>
+                <div class="uu-badge-req earned">✓ Đã mở khóa</div>
+            </div>
+            <div class="uu-discount">-10%</div>
+        </div>
+        <!-- Thêm các ưu đãi khác... -->
+    </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<!-- JS File -->
+<script src="script.js"></script>
 </body>
 </html>
